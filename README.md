@@ -41,7 +41,7 @@ You can write them like this with the use of AjaxAction:
 ```javascript
 export function login(username, password) {
   return new AjaxAction('LOGIN')
-    .callAsync((apiClient) => apiClient.postJSON('/api/v1/login', { username, password }))
+    .call((apiClient) => apiClient.postJSON('/api/v1/login', { username, password }))
     .toReduxAction();
 }
 ```
