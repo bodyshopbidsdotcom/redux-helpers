@@ -14,3 +14,6 @@ script:
   - npm run build
   - npm test
   - npm run lint
+branches:
+  only:
+    - master
