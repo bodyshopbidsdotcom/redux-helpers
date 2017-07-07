@@ -4,6 +4,7 @@ Helpers to reduce boilerplate with redux.
 
 [![npm version](https://img.shields.io/npm/v/snapsheet-redux-helpers.svg?style=flat-square)](https://www.npmjs.com/package/snapsheet-redux-helpers)
 [![npm downloads](https://img.shields.io/npm/dm/snapsheet-redux-helpers.svg?style=flat-square)](https://www.npmjs.com/package/snapsheet-redux-helpers)
+[![Build Status](https://travis-ci.org/bodyshopbidsdotcom/redux-helpers.svg?branch=master)](https://travis-ci.org/bodyshopbidsdotcom/redux-helpers)
 
 ## Installation
 
