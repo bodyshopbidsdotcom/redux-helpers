@@ -15,7 +15,7 @@ Helpers to reduce boilerplate with redux.
     $ yarn add snapsheet-redux-helpers
 
 ## Api middleware
-Using the api middle reduces boilerplate for async actions. Instead of writing actions for your apis like this:
+Using the api middleware reduces boilerplate for async actions. Instead of writing actions for your apis like this:
 
 ```javascript
 export function login(username, password) {
