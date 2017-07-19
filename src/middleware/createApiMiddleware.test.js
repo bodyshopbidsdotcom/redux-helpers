@@ -32,6 +32,27 @@ test('Successful ajax call', async t => {
   t.is(actions[1].response, responseData);
 });
 
+test('Response accessible in after callback', async t => {
+  const store = t.context.mockStore({});
+  const responseData = {
+    result: 'IT WORKED'
+  };
+  t.context.ApiClient.prototype.getJson = sinon.mock().returns(Promise.resolve(responseData));
+
+  await store.dispatch({
+    types: [FETCH, FETCH_SUCCESS, FETCH_ERROR],
+    ajax: (apiClient) => apiClient.getJson('/test')
+  }).then(response => {
+    return store.dispatch({ data: response, type: 'HANDLER'});
+  });
+
+  const actions = store.getActions();
+  t.is(actions[0].type, FETCH);
+  t.is(actions[1].type, FETCH_SUCCESS);
+  t.is(actions[1].response, responseData);
+  t.is(actions[2].data, responseData);
+});
+
 test('Error ajax call', async t => {
   const store = t.context.mockStore({});
   const error = {

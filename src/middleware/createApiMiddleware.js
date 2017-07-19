@@ -59,7 +59,7 @@ export default function createApiMiddleware(ApiClient) {
               response,
               type: SUCCESS
             });
-            return data;
+            return response;
           },
           error => {
             if (process.env.NODE_ENV === 'development') {
